@@ -10,6 +10,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: barlow;
+    font-size: 18px;
 }
 img, input{
     width: 100%;
@@ -19,4 +21,118 @@ a{
 }
 ul{
     list-style: none;
+}
+/* header */
+header .container{
+    background-image: url(../images/mobile/image-header.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 55vh;
+    position: relative;
+}
+nav{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+ul{
+    display: none;
+}
+#triangle-code{
+ height : 0;
+ width : 0;
+ border-bottom : 30px solid #FFFBF8;
+ border-left : 30px solid transparent;
+ position: absolute;
+ right: 0%;
+ top: -30px;
+}
+#openmenu{
+    display: none;
+}
+#menu #openmenu:checked~ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20%;
+    text-align: center;
+    background-color: #FFFBF8;
+    width: 93%;
+    transform: translate(-50% -50%);
+    padding: 1rem 0;
+    z-index: 10;
+    li{
+        color: hsl(232, 10%, 55%);
+        font-weight: bold;
+        padding: 1.5rem;
+    }
+    a{
+        color: black;
+        display: block;
+        background-color: #FBD601;
+        width: fit-content;
+        justify-self: center;
+        padding: 1rem 1.5rem;
+        border-radius: 40px;
+        text-transform: uppercase;
+        font-family: fraunces;
+    }
+}
+#over{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 25%;
+    left: 80px;
+    width: 65%;
+    text-align: center;
+    text-transform: uppercase;
+    h1{
+        font-family: fraunces;
+        color: white;
+        margin-bottom: 7rem;
+    }
+    img{
+        width: 10%;
+    }
+}
+/* card */
+main .container{
+    display: flex;
+    flex-direction: column;
+}
+main .container .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main .container .card .description{
+    width: 90%;
+    align-self: center;
+    text-align: center;
+    padding: 2rem 0;
+}
+main .container .card h2,p{
+    padding-bottom: 1rem;
+}
+main .container .card h2{
+    font-family: fraunces;
+    font-size: 35px;
+}
+main .container .card p{
+    color: hsl(210, 4%, 67%);
+    line-height: 1.5rem;
+    font-weight: bold;
+    font-family: barlow;
+}
+main .container .card a{
+    text-transform: uppercase;
+    font-family: fraunces;
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
 }
